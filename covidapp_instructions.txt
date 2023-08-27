@@ -1,0 +1,60 @@
+Tools used 
+
+1) visualstudio code, sql server and mysql workbench, postman for api testing, git bash,  
+
+Tech stack used 
+
+1)Front-end -->React,Javascript 
+2)Backend-end-->Java, spring boot
+3)db--> MySQL
+
+
+python script
+
+1) install pymysql  ---> pip install pymysql
+
+2)go to scripts folder in cmd and run -->python importdata.py
+
+
+Run backend app
+go to the folder in the terminal --> CovidDashboardApplication and run below commands
+1) mvn clean
+2) mvn spring-boot:run 
+
+libraries
+spring-boot, JPA, Hibernate, mySql
+
+
+
+
+front-end
+
+go to the folder ui/covidui in the terminal and run below commands
+
+1) npm install or npm install --force
+
+2) npm start
+
+when you do npm start ---> the following url will be opened in the default browser http://localhost:3000/v0.1/fetchData/allStates
+
+
+
+lilbraries used 
+
+npm install axios XLSX react-chartjs-2 bootstrap
+
+The packages added and its versions can be found in package.json file.
+All the packages and libraries will be added to node_modules. if any library is not found just do npm install and library name
+
+
+
+Database
+1)install  mysql on local machine and use the user and password set during server setup to connect to python
+2) run sql server
+
+
+if you change the values in the python script, drop the table in mysql and rerun the python script to update the table and api data
+
+ with new values will be inserted successfully in the table.
+
+
