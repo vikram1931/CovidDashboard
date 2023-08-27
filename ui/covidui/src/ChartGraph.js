@@ -7,7 +7,7 @@ const ChartGraph = () => {
   Chart.register(CategoryScale);
   Chart.register(LinearScale);
   Chart.register(...registerables);
-  // const states = ["TX", "CA", "NY", "IL", "PA", "OH", "GA", "NC", "MI"];
+
   const [chartData, setChartData] = useState({
     labels: [],
     datasets: [
