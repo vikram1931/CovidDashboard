@@ -35,7 +35,7 @@ go to the folder ui/covidui in the terminal and run below commands
 
 2) npm start
 
-when you do npm start ---> the following url will be opened in the default browser http://localhost:3000/v0.1/fetchData/allStates
+when you do npm start ---> the following url will be opened in the default browser http://localhost:3000
 
 
 
