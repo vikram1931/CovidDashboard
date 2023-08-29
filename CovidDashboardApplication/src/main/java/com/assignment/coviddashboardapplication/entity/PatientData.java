@@ -15,11 +15,8 @@ public class PatientData {
     public String state;
     public int positive;
     public String negative;
- 
-    public int hospitalizedCurrently;
     public String recovered;
     public int death;
-    public Integer icuCurrently;
 
     @Id
     @Column(name = "state", nullable = true)
@@ -39,16 +36,6 @@ public class PatientData {
     public void setPositive(int positive) {
         this.positive = positive;
     }
-
-  
-    @Column(name = "icu_currently", nullable= true)
-    public Integer getIcuCurrently() {
-        return icuCurrently;
-    }
-
-    public void setIcuCurrently(Integer icuCurrently) {
-        this.icuCurrently = icuCurrently;
-    }
  
     @Basic
     @Column(name = "negative", nullable = true)
@@ -58,15 +45,6 @@ public class PatientData {
 
     public void setNegative(String negative) {
         this.negative = negative;
-    }
-
-    @Column(name = "hospitalized_currently", nullable = true)
-    public int getHospitalizedCurrently() {
-        return hospitalizedCurrently;
-    }
-
-    public void setHospitalizedCurrently(int hospitalizedCurrently) {
-        this.hospitalizedCurrently = hospitalizedCurrently;
     }
 
     @Basic

@@ -33,8 +33,6 @@ def setup_database():
             state CHAR(2),
             positive INT,
             negative INT,
-            hospitalized_currently INT,
-            icu_currently INT,
             Recovered INT,
             death INT
         );
@@ -48,8 +46,8 @@ def insert_data(data):
     cursor = connection.cursor()
 
     insert_query = """
-        INSERT INTO covid_data (state, positive, negative, hospitalized_currently, icu_currently, Recovered, death)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
+        INSERT INTO covid_data (state, positive, negative,Recovered, death)
+        VALUES (%s, %s, %s, %s, %s)
     """
     cursor.execute(insert_query, data)
     connection.commit()
@@ -66,8 +64,6 @@ def fetch_and_store_data():
             data['state'],
             data['positive'],
             data['negative'],
-            data.get('hospitalizedCurrently', None),
-            data.get('inIcuCurrently', None),
             data.get('recovered', None),
             data['death']
         )

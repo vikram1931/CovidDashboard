@@ -2,6 +2,7 @@ import React from "react";
 import * as XLSX from "xlsx";
 const ExportToExcel = ({ covidata }) => {
   const data = covidata.map((covidcase) => {
+    //console.log("data", covidcase);
     return covidcase;
   });
   const handleExportToExcel = () => {
@@ -27,8 +28,6 @@ const ExportToExcel = ({ covidata }) => {
               <th>State</th>
               <th>Positive Cases Count</th>
               <th>Negative Cases Count</th>
-              <th>Currently Hospitalized</th>
-              <th>In ICU Currently</th>
               <th>Recovered</th>
               <th>Death Count</th>
             </tr>
@@ -47,16 +46,6 @@ const ExportToExcel = ({ covidata }) => {
                     {covidstatecase.negative === null
                       ? 0
                       : covidstatecase.negative}
-                  </td>
-                  <td>
-                    {covidstatecase.hospitalizedCurrently === null
-                      ? 0
-                      : covidstatecase.hospitalizedCurrently}
-                  </td>
-                  <td>
-                    {covidstatecase.icuCurrently === null
-                      ? 0
-                      : covidstatecase.icuCurrently}
                   </td>
                   <td>
                     {covidstatecase.recovered === null

@@ -3,7 +3,6 @@ import axios from "axios";
 import { Bar } from "react-chartjs-2";
 import "./App.css";
 
-import data from "./data";
 import ChartGraph from "./ChartGraph";
 import ExportToExcel from "./ExportToExcel";
 import "bootstrap/dist/css/bootstrap.min.css";

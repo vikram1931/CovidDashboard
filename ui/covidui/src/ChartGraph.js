@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, CategoryScale, LinearScale, registerables } from "chart.js";
-
+import App from "../src/App.css";
 import axios from "axios";
 const ChartGraph = () => {
   Chart.register(CategoryScale);
@@ -86,35 +86,49 @@ const ChartGraph = () => {
       console.error("Error fetching data:", error);
     }
   };
+  const options = {
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "states",
+          color: "red",
+          font: {
+            size: 30,
+          },
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Covid Cases",
+          color: "red",
+          font: {
+            size: 30,
+          },
+        },
+      },
+    },
+  };
 
   useEffect(() => {
     fetchData();
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <Bar
-        data={chartData}
-        options={{
-          title: {
-            display: true,
-            text: "Distribution of COVID-19 cases in selected states",
-            fontSize: 20,
-          },
-          legend: {
-            display: true,
-            position: "top",
-          },
+    <>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          fontStyle: "bold",
         }}
-      />
-    </div>
+      >
+        <Bar data={chartData} options={options} />
+      </div>
+    </>
   );
 };
 

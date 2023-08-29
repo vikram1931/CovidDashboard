@@ -1,7 +1,0 @@
-com\assignment\coviddashboardapplication\cofig\RestTemplateConfig.class
-com\assignment\coviddashboardapplication\service\CovidService.class
-com\assignment\coviddashboardapplication\controller\ApiController.class
-com\assignment\coviddashboardapplication\entity\PatientData.class
-com\assignment\coviddashboardapplication\CovidDashboardApplication.class
-com\assignment\coviddashboardapplication\repository\PatientRepository.class
-com\assignment\coviddashboardapplication\repositoryservice\PatientDataService.class
